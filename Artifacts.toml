@@ -1,0 +1,15 @@
+[merra]
+git-tree-sha1 = "224bda89ab34e53d9c91098648326118c9be94ea"
+lazy = true
+
+    [[merra.download]]
+    sha256 = "8c23698b5a6bd35c08d2b63bba85f689eb57d6011e2a65790af07a1ed135eb2a"
+    url = "http://web.gps.caltech.edu/~cfranken/Carbon-I/merra.tar.gz"
+
+[cross_sections]
+git-tree-sha1 = "c63c56afe90a5163133d461c6a50be6ced2ffc1f"
+lazy = true
+
+    [[cross_sections.download]]
+    sha256 = "1e90e7fec65cf811bbc92decbbaef5e457adf6c35f716d8ed7eefab9bc0e9764"
+    url = "https://www.dropbox.com/scl/fi/vej0rcr7geifgs12iktya/cross_sections.tar.gz?rlkey=xm80rtjbp3fvkm19voxkfjtj1&st=x8ucb7b9&dl=0"

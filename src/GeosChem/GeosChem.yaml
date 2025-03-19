@@ -1,0 +1,106 @@
+files:
+  - path: "/home/cfranken/data/GeosChem/Benchmark/GEOSChem.SpeciesConc.20190601_0000z.nc4"
+    variables: 
+      hyam: hyam
+      hybm: hybm
+      hyai: ai
+      hybi: bi
+      lat: lat
+      lon: lon
+      time: time
+      SpeciesConc_CH4: CH4
+      SpeciesConc_CO: CO
+      SpeciesConc_CO2: CO2
+      SpeciesConc_H2O: H2O
+      SpeciesConc_C2H6: C2H6
+      SpeciesConc_N2O: N2O
+  - path: "/home/cfranken/data/GeosChem/Benchmark/GEOSChem.StateMet.20190601_0000z.nc4"
+    variables:
+      Met_PBLH: pbl
+      Met_T: T
+      Met_TropHt: tropopause_height
+      Met_TropLev: tropopause_level
+      Met_PS1WET: psurf_start
+      Met_PS2WET: psurf_end
+      Met_SPHU: q
+      ilev: ilev
+      lev: lev
+  - path: "/home/cfranken/data/GeosChem/Benchmark/GEOSChem.Aerosols.20190601_0000z.nc4"
+    variables:
+      AODDust: aod_dust
+      AODHyg550nm_BCPI: aod_bcpi
+      AODHyg550nm_OCPI: aod_ocpi
+      AODHyg550nm_SALA: aod_sala
+      AODHyg550nm_SALC: aod_salc
+      AODHyg550nm_SO4:  aod_so4
+      AODStratLiquidAer550nm: aod_strat
+      Chem_AeroRadiOC: radius_ocpi
+      Chem_AeroRadiSSA: radius_sala
+      Chem_AeroRadiSSC: radius_salc
+      Chem_AeroRadiSULF: radius_so4
+      Chem_AeroRadiBC: radius_bcpi
+
+aerosols:
+  ocpi:
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.432 - 1e-8im
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.384
+    nᵢ: 1.26e-3
+  so4: # from https://github.com/GEOS-ESM/GEOSmie/blob/main/data/suso00
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.432 - 1e-8im
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.870E+00
+    nᵢ: 3.150E-02
+  sala: # from https://github.com/GEOS-ESM/GEOSmie/blob/main/data/sscm00
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.500E+00 -1.000E-08im 
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.430 
+    nᵢ: 4.000E-03
+  salc: # from https://github.com/GEOS-ESM/GEOSmie/blob/main/data/sscm00
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.500E+00 -1.000E-08im 
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.430 
+    nᵢ: 4.000E-03
+  bcpi: # from https://github.com/GEOS-ESM/GEOSmie/blob/main/data/soot00
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.750 -4.400e-01im
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.820 
+    nᵢ: -5.100E-01
+  strat: # https://amt.copernicus.org/articles/14/2345/2021/
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.432 - 1e-8im
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.870E+00
+    nᵢ: 3.150E-02
+  dust:
+    σ: 1.6  # geometric standard deviation (µm)
+    # Reference refractive index (at 550 nm)
+    λ_ref:          0.550 # Reference AOD wavelength (µm)
+    n_ref:          1.432 - 1e-8im
+    σ:              1.6           # geometric standard deviation (µm)
+    # Now at 2250nm (can be edited)
+    nᵣ: 1.384
+    nᵢ: 1.26e-3
